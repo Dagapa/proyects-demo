@@ -5,25 +5,22 @@ import data from './data.json'
 export const AgeCalculator = () => {
 
   const [birthDate, setBirthDate] = useState({});
-  const [age, setAge] = useState({ years: 0, months: 0, days: 0 });
+  const [age, setAge] = useState({ years: "", months: "", days: "" });
 
-	// porque no enviarle el label y el event?
-	// const handleInputChange = (label, event) => {
+  // porque no enviarle el label y el event?
+  // const handleInputChange = (label, event) => { - OK
 
-
-  const handleInputChange = (label) => (event) => {
-		//No es necesario recuperar todo el brithDate
+  const handleInputChange = (label, event) => {
+    //No es necesario recuperar todo el brithDate - PENDIENTE CORREGIR
     setBirthDate({
       ...birthDate,
-      [label]: event.target.value,
+      [label]: event.target.value
     });
   };
 
-  const allValuesAreValid = Object.values(birthDate);
-
   const handleAgeCalc = () => {
 
-    if (allValuesAreValid.length === 3) {
+    if (birthDate.year !== undefined && birthDate.month !== undefined && birthDate.day !== undefined) {
 
       let today = new Date();
       let todayDay = today.getDate();
@@ -42,12 +39,12 @@ export const AgeCalculator = () => {
         todayYear = todayYear - 1;
       }
 
-      let years = parseInt(todayYear - birthDate.year);
-      let months = parseInt(todayMonth - birthDate.month);
-      let days = parseInt(todayDay - birthDate.day);
+      let years = (todayYear - birthDate.year).toString();
+      let months = (todayMonth - birthDate.month).toString();
+      let days = (todayDay - birthDate.day).toString();
 
-			// No es necesario recuperar todo el objeto (...age, ...).
-      setAge({ ...age, years: years, months: months, days: days })
+      // No es necesario recuperar todo el objeto (...age, ...). - OK
+      setAge({ years: years, months: months, days: days })
 
     } else {
       console.error("Falta uno de los campos")
@@ -62,9 +59,9 @@ export const AgeCalculator = () => {
             return (
               <div key={index} className={styles.input_container}>
                 <label htmlFor={elemento.titulo} >{elemento.label}</label>
-								{/* <input type='number' min="0" onChange={(event) => handleInputChange(elemento.label, event)}></input> */}
+                {/* <input type='number' min="0" onChange={(event) => handleInputChange(elemento.label, event)}></input> - OK */}
 
-                <input type='number' min="0" onChange={handleInputChange(elemento.label)}></input>
+                <input type='number' placeholder={elemento.placeholder} onChange={(event) => handleInputChange(elemento.label, event)}></input>
               </div>
             )
           })
@@ -73,9 +70,9 @@ export const AgeCalculator = () => {
       </div>
       <div className={styles.container_items}>
 
-        <h1><span>{(age.days != 0) ? `${age.days}` : "--"}</span>days</h1>
-        <h1><span>{(age.months != 0) ? `${age.months}` : "--"}</span>months</h1>
-        <h1><span>{(age.years != 0) ? `${age.years}` : "--"}</span>years</h1>
+        <h1><span>{(age.days === "") ? "- -" : `${age.days}`} </span>days</h1>
+        <h1><span>{(age.months === "") ? "- -" : `${age.months}`} </span>months</h1>
+        <h1><span>{(age.years === "") ? "- -" : `${age.years}`} </span>years</h1>
 
       </div>
     </div>
