@@ -1,0 +1,27 @@
+.card_container{
+  display: flex;
+  background-color: white;
+  box-shadow: 0 0 10px rgb(131, 131, 131);
+  border-radius: 15px;
+  padding: 55px 30px 55px 120px;
+  justify-content: space-between;
+  gap: 150px
+}
+
+.section_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.section_container p {
+  color: grey
+}
+
+.images_container img{
+  max-width: 400px;
+  max-height: 300px;
+}
+
+
