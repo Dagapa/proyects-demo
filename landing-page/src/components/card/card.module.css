@@ -24,4 +24,28 @@
   max-height: 300px;
 }
 
+@media (max-width: 425px) {
+
+  .card_container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px
+  }
+
+  .images_container img {
+    max-width: 200px;
+  }
+
+  .section_container {
+    align-items: center;
+  }
+
+  .section_container p {
+    text-align: center;
+  }
+
+
+}
 

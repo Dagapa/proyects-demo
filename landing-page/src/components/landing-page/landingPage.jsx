@@ -11,12 +11,14 @@ import logofooter from '../../assets/logo-footer.svg';
 
 export const LandingPage = () => {
 
+  //Que es un aspect ratio?
+
   return (
     <div className={styles.landingPage_container}>
       <div className={styles.home_container}>
         <div className={styles.header_container}>
           <img src={logo}></img>
-          <Button text="Try It Free" backgroundColor="white" color="black" />
+          <button className={styles.header_button}>Try It Free</button>
         </div>
         <div className={styles.content_container}>
           <div className={styles.section_container}>
