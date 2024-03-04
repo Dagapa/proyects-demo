@@ -29,8 +29,9 @@ export const LandingPage = () => {
         </div>
         <div className={styles.content_container}>
           <div className={styles.section_container}>
-            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae autem nesciunt aut totam, nobis mollitia pariatur, ut, asperiores aspernatur sit labore. Aperiam est porro distinctio laborum veniam, voluptas atque!</p>
+            <h1>Build The Community Your Fans Will Love</h1>
+            <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+              Create connections with your users as you engage in genuine discussion. </p>
             <Button text="Get Started For Free" />
           </div>
           <div className={styles.image}>
@@ -44,7 +45,7 @@ export const LandingPage = () => {
           text="Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form. "
           images={imagenCard1} />
         <div className={styles.card_container}>
-        <div className={styles.images_container}>
+          <div className={styles.images_container}>
             <img src={imagenCard2}></img>
           </div>
           <div className={styles.section_container}>

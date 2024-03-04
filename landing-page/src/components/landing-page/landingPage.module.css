@@ -85,10 +85,6 @@
   margin: 0 90px;
 }
 
-.section_container p {
-  color: grey
-}
-
 .images_container {
   margin: 0 90px;
 }
@@ -241,6 +237,7 @@
   }
 
   .section_container p {
+    margin: 20px 0;
     text-align: center;
   }
 
