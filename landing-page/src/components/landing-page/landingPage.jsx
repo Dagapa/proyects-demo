@@ -65,7 +65,7 @@ export const LandingPage = () => {
       </div>
       <div className={styles.footer_container}>
         <div className={styles.card_footer}>
-          <Card title=" Ready To Build Your Community?" flexDirection="column" alignItems="center" button={<Button text="Get Started For Free" fontSize="15px" padding="17px 75px" />} />
+          <Card title=" Ready To Build Your Community?" flexDirection="column" alignItems="center" button={true} />
         </div>
         <div className={styles.section_footer}>
           <div className={styles.logo_footer}>
